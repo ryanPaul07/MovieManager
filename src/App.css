@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.CardsView {
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.CardDeck {
+  width: 200rem; 
+}
+
+.MoviePoster {
+  height: 30vh;
+}
+
+.SelectedCardView {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 376px) {
+  .form-row {
+    justify-content: center;
+    display: flex;
+    margin-right: -5px;
+    margin-left: 5px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 376px) {
+  .SelectedCardView {
+    width: 20rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+
+/* for Bootstrap CardDeck and Card */
+@media (max-width: 576px) {
+  .CardDeck {
+    display: flex;
+  }
+  .CardDeck .card {
+    margin-right: 10px;
+    margin-left: 10px;
+    flex: 1 0 0%;
   }
 }
