@@ -24,7 +24,7 @@ function Search() {
     handleErrorCode(null);
     setMovies([]);
 
-    const response = await fetch(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API}&s=${movieTitle.value}&type=movie&page=1`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API}&s=${movieTitle.value}&type=movie&page=1`);
     const responseJson = await response.json();
     
     handleResponse(responseJson);
